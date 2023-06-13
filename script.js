@@ -69,24 +69,66 @@ function animateBanner1() {
     banner.classList.add("animateOut");
     banner.onanimationend = (e) => {
       if (e.target.classList.contains("banner")) {
-        banner.classList.remove("No1");
+        banner.classList.remove("No1", "animateOut");
+
         banner.innerHTML = "";
+        animateBanner2();
       }
     };
   };
 }
-// animateBanner1();
+
 function animateBanner2() {
+  banner.innerHTML = `<h2 class="headerText">It includes</h2>
+          <h3 class="subHeaderText">
+            Information about living with managing LN
+          </h3>
+          <div class="usb">
+            <div class="textContainer">
+              <span class="arrow"></span>
+              <span>
+                <p class="usbText one">AL</p>
+                <p class="usbText two">I</p>
+                <p class="subText">Lorem ipsum dolor sit, amet conse</p>
+              </span>
+            </div>
+          </div>
+          <div class="checkContainer">
+          <span class="checkWrap"></span>
+          <span class="checkWrap"></span>
+          <span class="checkWrap"></span>
+          <span class="checkWrap"></span>
+          </div>
+        </div>`;
+
   banner.classList.add("No2");
   const headerTextBanner2 = document.querySelector(".banner.No2 .headerText");
   const usb = document.querySelector(".usb");
+  const checkWraps = document.querySelectorAll(".checkWrap");
   headerTextBanner2.onanimationend = () => {
     usb.classList.add("banner2AnimationUsb");
   };
-  const checks = document.querySelectorAll(".check");
-  checks.forEach((check) => {
-    console.log(check);
-    check.style.setProperty("--animation", "fadeIn 1s forwards"); // animate pseudo element
-  });
+  usb.onanimationend = () => {
+    checkWraps.forEach((checkWrap) =>
+      checkWrap.style.setProperty("--animation", "fadeIn 1s forwards")
+    ); // animate pseudo element
+
+    checkWraps.forEach(
+      (checkWrap) => (checkWrap.innerHTML += `<span class="check"></span>`)
+    );
+  };
+  checkWraps[0].onanimationend = (e) => {
+    if (banner.innerHTML != "") {
+      banner.classList.add("animateOut");
+      banner.onanimationend = (e) => {
+        if (e.target.classList.contains("banner")) {
+          banner.classList.remove("No2", "animateOut");
+          banner.innerHTML = "";
+          // animateBanner3(); next banner (to be added)
+        }
+      };
+    }
+  };
 }
-animateBanner2();
+// animateBanner2();
+animateBanner1();

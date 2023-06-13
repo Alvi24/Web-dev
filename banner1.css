@@ -14,10 +14,11 @@ body {
   border: black 2px solid;
   position: relative;
 }
-.banner > *:not(.particle) {
-  /* opacity: 0; */
+.banner.No1 > *:not(.particle) {
+  opacity: 0;
 }
-.headerText,.subHeaderText {
+.headerText,
+.subHeaderText {
   width: 55%;
   display: block;
   margin-inline: auto;
@@ -25,7 +26,6 @@ body {
   text-align: center;
   font-size: 2em;
   color: rgb(74, 18, 138);
- 
 }
 .titleContainer {
   /* width: 200px; */
@@ -118,16 +118,7 @@ body {
     opacity: 0;
   }
 }
-.barcelet {
-  width: 500px;
-  height: 50px;
-  background-color: red;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 5%;
-  margin-bottom: 100px;
-  /* transform-style: preserve-3d;
-    transform: rotateZ(360deg); */
-}
+
 .animateParticle {
   animation: particleAnimation 0.5s forwards;
 }
