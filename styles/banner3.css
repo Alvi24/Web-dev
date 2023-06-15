@@ -21,7 +21,7 @@
   opacity: 0;
 }
 
- .braceletContainer {
+.braceletContainer {
   width: 60%;
   height: 300px;
   margin-inline: auto;
@@ -31,7 +31,7 @@
   gap: 10%;
   transform: translateY(55%);
 }
- .braceletContainer :is(.bracelet1, .bracelet2) {
+.braceletContainer :is(.bracelet1, .bracelet2) {
   position: relative;
   width: 100%;
   height: 600px;
@@ -55,10 +55,32 @@
   left: 25%;
   color: white;
   font-size: 28px;
-  
-  animation: text-animation 1s forwards;
 }
-  
+
+.braceletText::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  right: 0;
+}
+:is(.bracelet1, .bracelet2) .braceletText.animate::after {
+  animation: braceletText-animation 0.25s 1s steps(3) forwards;
+}
+
+.bracelet1 .braceletText::after {
+  width: 45%;
+  background-color: rgb(86, 15, 153);
+}
+.bracelet2 .braceletText::after {
+  background-color: orange;
+}
+@keyframes braceletText-animation {
+  to {
+    width: 0;
+  }
+}
+
 @keyframes title-animation {
   from {
     opacity: 0;
@@ -70,7 +92,7 @@
   }
 }
 .banner.No3 :is(.bracelet1, .bracelet2).animate {
-  animation: fadeIn 1s forwards, round-bracelet 0.5s 1s forwards;
+  animation: fadeIn 1s forwards, round-bracelet 0.5s 1.25s forwards;
 }
 @keyframes round-bracelet {
   to {

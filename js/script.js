@@ -8,6 +8,20 @@ import {
 } from "./bannersHTMLProvider.mjs";
 
 const banner = document.querySelector(".banner");
+const initBanner = banner.innerHTML;
+function animateInitBanner() {
+  setTimeout(() => {
+    banner.classList.add("animateOut");
+    banner.onanimationend = (e) => {
+      if (e.target.classList.contains("banner")) {
+        banner.classList.remove("No2", "animateOut");
+        banner.innerHTML = "";
+        // animateBanner3(); next banner (to be added)
+        animateBanner1();
+      }
+    };
+  }, 500);
+}
 function animateBanner1() {
   banner.innerHTML = banner1HTML;
   banner.classList.add("No1");
@@ -81,6 +95,7 @@ function animateBanner3() {
   const subTextBanner3 = document.querySelector(".banner.No3 .subHeaderText");
   const bracelet1 = document.querySelector(".bracelet1");
   const bracelet2 = document.querySelector(".bracelet2");
+  const braceletsText = document.querySelectorAll(".braceletText");
   headerTextBanner3.classList.add("animate");
   headerTextBanner3.onanimationend = () => {
     subTextBanner3.classList.add("animateIn");
@@ -88,9 +103,12 @@ function animateBanner3() {
   subTextBanner3.onanimationend = () => {
     bracelet1.classList.add("animate");
     bracelet2.classList.add("animate");
+    braceletsText.forEach((braceletText) =>
+      braceletText.classList.add("animate")
+    );
   };
 
-  bracelet2.onanimationend = (e) => {
+  braceletsText[0].onanimationend = (e) => {
     if (banner.innerHTML != "") {
       setTimeout(() => {
         banner.classList.add("animateOut");
@@ -109,6 +127,7 @@ function animateBanner4() {
   banner.innerHTML = banner4HTML;
   const bannerCard = document.querySelector(".bannerCard");
   const secondPage = document.querySelector(".secondPage");
+  const particles = document.querySelectorAll(".particle");
   console.log(bannerCard);
   banner.classList.add("No4");
   banner.classList.add("animateIn");
@@ -119,16 +138,20 @@ function animateBanner4() {
   bannerCard.onanimationend = () => {
     bannerCard.innerHTML = banner4CardBackFace;
     bannerCard.classList.add("animateCard2", "open");
+    particles.forEach((particle) => {
+      particle.classList.add("animateParticle");
+    });
     setTimeout(() => {
       banner.classList.add("animateOut");
       banner.onanimationend = (e) => {
         if (e.target.classList.contains("banner")) {
           banner.classList.remove("No4", "animateOut");
-          banner.innerHTML = "";
+          banner.innerHTML = initBanner;
+          banner.classList.add("No0", "animateIn");
           // animateFinishBanner(); next banner (to be added)
         }
       };
-    },800);
+    }, 800);
   };
 
   // banner.onanimationend = () => {
@@ -136,7 +159,8 @@ function animateBanner4() {
   //   // animateBanner5(); next banner (to be added)
   // };
 }
-animateBanner1();
+animateInitBanner();
+// animateBanner1();
 // animateBanner2();
 // animateBanner3();
 // animateBanner4();

@@ -127,7 +127,40 @@ export const banner4HTML = `<h2 class="bannerHeading">Go ALL IN with us</h2>
   </div>
 </div></div>
 </div>
-<button class="registerButton">Register for your kit</button>`;
+<button class="registerButton">Register for your kit</button>
+<span
+  class="particle halfCircleAqua"
+  style="left: 11%; top: 30%"
+></span>
+<span
+  class="particle halfCircleBlue"
+  style="left: 10%; top: 60%;"
+></span>
+<span
+  class="particle circlePurple"
+  style="left: 50%; top: 78%"
+></span>
+<span
+  class="particle halfCircleAqua"
+  style="left: 81%; top: 65%;"
+></span>
+<span
+  class="particle halfCircleBlue"
+  style="left: 67%; top: 74%;"
+></span>
+<span
+  class="particle rectangleDark"
+  style="left: 85%; top: 51%"
+></span>
+<span class="particle circleAqua" style="left: 79%; top: 22%"></span>
+<span
+  class="particle rectangleAqua"
+  style="left: 77%; top: 35%"
+></span>
+<span
+  class="particle rectangleDark"
+  style="left: 10%; top: 47%;"
+></span>`;
 
 export const banner4CardBackFace = `<div class="textParagraph1">
 <div class="textBar"></div>
