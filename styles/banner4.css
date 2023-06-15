@@ -15,11 +15,9 @@
   margin-inline: auto;
   margin-block-start: 25%;
   margin-inline-end: 30%;
-  /* transform: rotate(0); */
   transform-style: preserve-3d;
   display: flex;
   align-items: center;
-  /* transform: rotate(-90deg) rotateX(180deg); */
 }
 .bannerCard::before {
   width: 100%;
@@ -84,13 +82,10 @@
     transform: rotate(-90deg) rotateX(0deg);
   }
   100% {
-    transform: rotate(-90deg) rotateX(90deg); /*rotateX(180deg)*/
+    transform: rotate(-90deg) rotateX(90deg); 
     opacity: 0;
   }
-  /* 100% {
-    transform: rotate(90deg) rotateX(360deg);
-    opacity: 1;
-  } */
+ 
 }
 .bannerCard.animateCard2 {
   animation: card2 0.25s forwards;

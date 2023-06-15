@@ -16,7 +16,6 @@ function animateInitBanner() {
       if (e.target.classList.contains("banner")) {
         banner.classList.remove("No2", "animateOut");
         banner.innerHTML = "";
-        // animateBanner3(); next banner (to be added)
         animateBanner1();
       }
     };
@@ -79,7 +78,6 @@ function animateBanner2() {
         if (e.target.classList.contains("banner")) {
           banner.classList.remove("No2", "animateOut");
           banner.innerHTML = "";
-          // animateBanner3(); next banner (to be added)
           animateBanner3();
         }
       };
@@ -148,16 +146,12 @@ function animateBanner4() {
           banner.classList.remove("No4", "animateOut");
           banner.innerHTML = initBanner;
           banner.classList.add("No0", "animateIn");
-          // animateFinishBanner(); next banner (to be added)
         }
       };
     }, 800);
   };
 
-  // banner.onanimationend = () => {
-  //   banner.classList.remove("No3", "animate");
-  //   // animateBanner5(); next banner (to be added)
-  // };
+
 }
 animateInitBanner();
 // animateBanner1();
