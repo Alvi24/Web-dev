@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;1,500;1,700;1,900&family=Inter:wght@500&family=Open+Sans:wght@600&family=Poppins:ital@1&family=Roboto+Flex:opsz,wght@8..144,500&family=Roboto+Mono:ital,wght@1,500&display=swap");
+.bannerHeading {
+  font-family: "Golos Text", sans-serif;
+  width: 55%;
+  display: block;
+  margin-inline: auto;
+  transform: translateY(100%);
+  text-align: center;
+  font-size: 2.2em;
+  color: white;
+}
+.bannerCard {
+  width: 300px;
+  height: 150px;
+  margin-inline: auto;
+  margin-block-start: 25%;
+  margin-inline-end: 30%;
+  /* transform: rotate(0); */
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  /* transform: rotate(-90deg) rotateX(180deg); */
+}
+.bannerCard::before {
+  width: 100%;
+  left: 0;
+  top: 113%;
+  height: 25%;
+  background-color: rebeccapurple;
+}
+.bannerCard::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  top: 112%;
+  height: 25%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px 10px 4px 4px;
+}
+
+.bannerCard .textContainer {
+  width: 70%;
+  margin-inline-start: 20%;
+  margin-inline-end: 10%;
+}
+.bannerCard .arrow {
+  width: 15%;
+  height: 30px;
+  transform: translateX(10%);
+}
+
+.arrow::after {
+  width: 30%;
+  height: 30%;
+  margin-inline-end: 12%;
+  border-width: 0 4px 4px 0px;
+}
+
+.bannerCard .textContainer .usbText {
+  font-size: 40px;
+}
+.usbText.two::before {
+  content: "TM";
+  position: absolute;
+  left: 100%;
+  font-size: 10px;
+}
+.No4 .subText {
+  position: absolute;
+  right: 12%;
+  top: 60%;
+  font-size: 10px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 600;
+  color: rebeccapurple;
+}
+.registerButton {
+  display: block;
+  width: 45%;
+  height: 43px;
+  margin-inline: auto;
+  background-color: rgb(2, 190, 190);
+  border-radius: 20px;
+  border: 1px solid rgb(2, 124, 168);
+  transform: translate(-5%, 250%);
+  color: white;
+  font-family: "Golos Text", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+}
+.bannerCard.animateCard1 {
+  animation: card 0.5s forwards ease-in;
+}
+
+@keyframes card {
+  0% {
+    transform: rotate(-90deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotate(-90deg) rotateX(90deg); /*rotateX(180deg)*/
+    opacity: 0;
+  }
+  /* 100% {
+    transform: rotate(90deg) rotateX(360deg);
+    opacity: 1;
+  } */
+}
+.bannerCard.animateCard2 {
+  animation: card2 0.5s forwards;
+}
+@keyframes card2 {
+  0% {
+    transform: rotate(-90deg) rotateX(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-90deg) rotateX(180deg);
+    opacity: 1;
+  }
+}
+.textParagraph1 {
+  height: 65%;
+  display: flex;
+  gap: 12px;
+}
+.bannerContainer {
+  display: grid;
+  width: 300px;
+  margin: 0 auto;
+  grid-template-columns: auto auto;
+  grid-auto-rows: 300px;
+  transform: translate(-20%, 18%);
+}
+.bannerCard.open {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  margin-inline-end: 35%;
+}
+.secondPage {
+  position: relative;
+  z-index: -1;
+  transform: rotate(-90deg) translateY(-200%);
+  background-color: rgb(240, 240, 240);
+}
+.secondPage.open {
+  animation: page-slide 0.9s forwards;
+}
+@keyframes page-slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-90deg) translateY(-100%);
+  }
+}
+
+.secondPage::before,
+.secondPage::after {
+  display: none;
+}
+.innerPage {
+  width: 40%;
+  height: 180%;
+  background-color: rgb(224, 224, 224);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transform: rotate(90deg);
+  gap: 10px;
+}
+.innerPage :where(.usbParagraph, .braceletParagraph) {
+  width: 100%;
+  height: 40%;
+}
+
+.usbParagraph .usb {
+  width: 80px;
+  height: 30px;
+  margin: 0;
+  transform: translate(-20%, 150%) rotate(-90deg);
+  border-radius: 1px;
+}
+.usbParagraph .usb::before {
+  background-color: white;
+  height: 100%;
+  width: 25%;
+  border-radius: 3px;
+  transform: translateX(20%);
+}
+.usbParagraph .usb .arrow {
+  width: 8px;
+  height: 8px;
+  transform: translate(-60%, 20%);
+}
+.usbParagraph .usb .arrow::after {
+  border-width: 0 1px 1px 0;
+}
+.usbParagraph .usb .usbText {
+  font-family: "Bitter", serif;
+  font-size: 9.5px;
+  margin: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-weight: 600;
+}
+.usbParagraph .usb .usbText.one {
+  transform: translateX(-20%);
+}
+.usbParagraph .usb .usbText.two::before {
+  font-size: 3px;
+}
+.usbParagraph .usb .subText {
+  font-size: 2.6px;
+  transform: translate(-10%, 40%);
+  font-weight: 600;
+}
+.usbParagraph > * {
+  display: inline-block !important;
+}
+.usbParagraph .text {
+  width: 70%;
+  display: flex;
+  transform: translate(50%, -15%) rotate(0);
+  height: 65%;
+}
+.text .textBar:first-child {
+  width: 40%;
+  background-color: rgb(78, 1, 78);
+}
+.text .textBar {
+  margin: 0;
+  display: block;
+  margin-block: 8px;
+  margin-inline-start: 3px;
+  width: 80%;
+  height: 10%;
+  background-color: rgba(128, 128, 128, 0.3);
+}
+.braceletParagraph {
+  transform: translateY(20%);
+}
+.braceletParagraph .text .textBar:first-child {
+  width: 20px;
+}
+.braceletParagraph .text .textBar {
+  width: 50%;
+  margin-inline-start: 10px;
+  height: 7px;
+}
+.textBar {
+  width: 10px;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.3);
+}
+.No4:not(.No3) .braceletContainer {
+  width: 20%;
+  height: 80%;
+  transform: rotate(90deg);
+}
+.No4:not(.No3) .braceletContainer :where(.bracelet1, .bracelet2) {
+  opacity: 1;
+  border-radius: 40%;
+  width: 70px;
+  transform: translate(-130%,10%);
+  box-shadow: 0 -12px 0 0 rgb(86, 15, 153);
+}
+.No4:not(.No3) .braceletContainer .bracelet2 {
+  box-shadow: 0 -12px 0 0 orange;
+  transform: translate(-130%,-60%);
+}

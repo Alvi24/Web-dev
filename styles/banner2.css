@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;1,500;1,700&family=Inter:wght@500&family=Poppins:ital@1&family=Roboto+Flex:opsz,wght@8..144,500&family=Roboto+Mono:ital,wght@1,500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Golos+Text&family=Open+Sans:ital@1&family=Roboto:ital,wght@1,300&display=swap");
+
 
 .banner.No2 > *:not(.checkContainer) {
   opacity: 0;
@@ -10,7 +10,6 @@
   font-size: 45px;
   color: rgb(68, 18, 126);
   margin-bottom: 5px;
-
   animation: banner2AnimationText 1s forwards;
 }
 
@@ -35,19 +34,10 @@
 .checkContainer * {
   /* opacity: 0; */
 }
-/* .checkContainer .check {
-  position: relative;
-  width: 20px;
-  height: 40px;
-  border-bottom: 9px solid rgb(68, 18, 126);
-  border-right: 9px solid rgb(68, 18, 126);
-  transform: rotate(45deg);
-  animation: check 4s forwards;
-} */
+
 .checkWrap {
   position: relative;
   transform: rotate(45deg);
-  /* animation: var(--animation); */
 }
 .checkWrap::before {
   content: "";

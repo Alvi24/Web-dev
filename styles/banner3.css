@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;1,500;1,700&family=Inter:wght@500&family=Open+Sans:wght@600;700&family=Poppins:ital@1&family=Roboto+Flex:opsz,wght@8..144,500&family=Roboto+Mono:ital,wght@1,500&display=swap");
+
+.banner.No3:not(.No2) * {
+  font-family: "Open Sans", sans-serif;
+}
+.banner.No3:not(.No1) .headerText {
+  font-size: 45px;
+  color: rgb(68, 18, 126);
+  margin-bottom: 5px;
+  opacity: 0;
+}
+.banner.No3 .headerText.animate {
+  animation: title-animation 0.5s forwards;
+}
+.banner.No3 .subHeaderText {
+  width: 65%;
+  color: white;
+  font-size: 30px;
+  margin-top: 5px;
+  margin-block-end: 0;
+  opacity: 0;
+}
+
+ .braceletContainer {
+  width: 60%;
+  height: 300px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10%;
+  transform: translateY(55%);
+}
+ .braceletContainer :is(.bracelet1, .bracelet2) {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin: auto;
+  inset: 0;
+}
+.bracelet1 {
+  box-shadow: 0 -55px 0 0 rgb(86, 15, 153);
+  opacity: 0;
+}
+.bracelet2 {
+  background-color: rgb(255, 115, 0);
+  background-color: transparent;
+  box-shadow: 0 -55px 0 0 orange;
+  transform: translateY(-60%);
+  opacity: 0;
+}
+:is(.bracelet1, .bracelet2) .braceletText {
+  position: absolute;
+  bottom: 85%;
+  left: 25%;
+  color: white;
+  font-size: 28px;
+  
+  animation: text-animation 1s forwards;
+}
+  
+@keyframes title-animation {
+  from {
+    opacity: 0;
+    transform: translateY(150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+}
+.banner.No3 :is(.bracelet1, .bracelet2).animate {
+  animation: fadeIn 1s forwards, round-bracelet 0.5s 1s forwards;
+}
+@keyframes round-bracelet {
+  to {
+    border-radius: 46%;
+  }
+}
