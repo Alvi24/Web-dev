@@ -22,6 +22,7 @@
 body {
   display: grid;
   place-items: center;
+
 }
 
 .container {
@@ -53,12 +54,12 @@ body {
 .registerButton {
   display: block;
   width: 47%;
-  height: 50px;
+  height: 53px;
   margin-inline: auto;
   background-color: rgb(0, 191, 214);
   border-radius: 25px;
   border: 2px solid rgb(89, 133, 221);
-  transform: translate(0, 160%);
+  transform: translate(0, 130%);
   color: white;
   font-family: "MediumPoppinsFont", sans-serif;
   font-size: 20px;
@@ -154,9 +155,10 @@ body {
 @keyframes fadeIn {
   from {
     opacity: 0;
+    margin-top: 7px;
   }
   to {
-    margin-top: -0.5px;
+    margin-top: 1px;
     opacity: 1;
   }
 }
