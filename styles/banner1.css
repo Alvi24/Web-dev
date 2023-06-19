@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "MediumPoppinsFont";
+  src: url("../assests/fonts/Poppins/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "BoldPoppinsFont";
+  src: url("../assests/fonts/Poppins/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "SemiBoldPoppinsFont";
+  src: url("../assests/fonts/Poppins/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: "RegularPoppinsFont";
+  src: url("../assests/fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "ExtraBoldPoppinsFont";
+  src: url("../assests/fonts/Poppins/Poppins-ExtraBold.ttf");
+}
+
+body {
+  display: grid;
+  place-items: center;
+
+}
+
+.container {
+  width: 600px;
+  height: 600px;
+  background-color: rgb(146, 96, 227);
+  border: black 2px solid;
+  position: relative;
+  transform: scale(0.6);
+}
+
+.No0:not(.No1) .title {
+  font-family: sans-serif;
+  width: fit-content;
+  font-size: 45px;
+  font-weight: 600;
+  margin-inline: auto;
+  color: white;
+  text-align: center;
+  margin-block: 150px 0;
+  transform: translateY(20%);
+}
+
+.No0 .title span {
+  font-family: "Golos Text", sans-serif;
+  color: rgb(73, 16, 148);
+  font-weight: 730;
+}
+.registerButton {
+  display: block;
+  width: 47%;
+  height: 53px;
+  margin-inline: auto;
+  background-color: rgb(0, 191, 214);
+  border-radius: 25px;
+  border: 2px solid rgb(89, 133, 221);
+  transform: translate(0, 130%);
+  color: white;
+  font-family: "MediumPoppinsFont", sans-serif;
+  font-size: 20px;
+}
+
+.banner.No0 .registerButton:hover {
+  color: rgb(0, 191, 214);
+  background-color: transparent;
+}
+.banner.No1 * {
+  font-family: "ExtraBoldPoppinsFont", sans-serif;
+  box-sizing: border-box;
+}
+
+.banner.No1 > *:not(.confetti) {
+  opacity: 0;
+}
+.headerText,
+.subHeaderText {
+  display: block;
+  margin-inline: auto;
+  transform: translateY(60%);
+  text-align: center;
+  font-size: 2.1em;
+  line-height: 45px;
+  font-family: "ExtraBoldPoppinsFont", sans-serif;
+  color: rgb(78, 1, 141);
+}
+.No1 .headerText{
+  transform: translateY(90%);
+}
+.No1:not(.No2) .title {
+  text-align: center;
+  font-family: "MediumPoppinsFont", sans-serif;
+  color: white;
+  font-size: 75px;
+  line-height: 80px;
+  letter-spacing: 4px;
+  font-weight: 750;
+  transform: translateY(35%);
+  /* margin-block-start: 16%; */
+}
+
+.confetti {
+  display: inline-block;
+  position: absolute;
+  margin: 20px;
+  transform: scale(0);
+}
+.halfCircleAqua {
+  width: 152px;
+  height: 72px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-left: rgb(6, 249, 255) 6px solid;
+}
+.halfCircleBlue {
+  width: 122px;
+  height: 75px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-left: rgb(4, 187, 211) 8px solid;
+}
+.rectangleAqua {
+  width: 8px;
+  height: 30px;
+  background-color: rgb(4, 251, 254);
+}
+.rectangleDark {
+  width: 1.2%;
+  height: 25px;
+
+  background-color: rgb(79, 47, 124);
+}
+.circlePurple {
+  /* width: 30px;
+  height: 30px; */
+  width: 2%;
+  height: 2%;
+  background-color: rgb(79, 5, 143);
+  border-radius: 50%;
+}
+.circleAqua {
+  width: 3%;
+  height: 3%;
+  background-color: rgb(2, 253, 250);
+  border-radius: 50%;
+}
+
+.animateIn {
+  animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    margin-top: 7px;
+  }
+  to {
+    margin-top: 1px;
+    opacity: 1;
+  }
+}
+.animateOut {
+  animation: fadeOut 1s forwards;
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animateConfetti {
+  animation: confettiAnimation 0.5s forwards;
+}
+@keyframes confettiAnimation {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

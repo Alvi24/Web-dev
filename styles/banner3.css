@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+.banner.No3:not(.No2) *:not(.braceletText) {
+  font-family: "MediumPoppinsFont", sans-serif;
+}
+.banner.No3:not(.No1) .headerText {
+  font-size: 62px;
+  color: rgb(61, 2, 135);
+  font-family: "BoldPoppinsFont", sans-serif;
+  margin-bottom: 5px;
+  opacity: 0;
+}
+.banner.No3 .headerText.animate {
+  animation: title-animation 0.25s forwards;
+}
+.banner.No3 .subHeaderText {
+  color: white;
+  font-size: 30px;
+  margin-top: 5px;
+  letter-spacing: 1px;
+  margin-block-end: 20px;
+  transform: translateY(29%);
+  opacity: 0;
+}
+
+.braceletContainer {
+  width: 60%;
+  height: 300px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15%;
+  transform: translateY(40%);
+}
+.braceletContainer :is(.bracelet1, .bracelet2) {
+  position: relative;
+  width: 92%;
+  height: 200px;
+  margin: auto;
+  inset: 0;
+}
+.bracelet1 {
+  box-shadow: 0 -55px 0 0 rgb(90, 45, 162);
+  opacity: 0;
+}
+.bracelet2 {
+  box-shadow: 0 -55px 0 0 rgb(255, 142, 61);
+  transform: translateY(-70%);
+  opacity: 0;
+}
+
+:is(.bracelet1, .bracelet2) .braceletText {
+  position: absolute;
+  bottom: 79%;
+  left: 17%;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 750;
+  /* transform: rotate(3deg) translateX(-7%); */
+  font-size: 31px;
+}
+
+:is(.bracelet1, .bracelet2) .braceletText .first-letters {
+
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  rotate: -6deg;
+}
+
+:is(.bracelet1, .bracelet2) .braceletText .last-letters {
+ 
+  display: inline-block;
+  position: relative;
+  bottom: -1px;
+  rotate: 6deg;
+}
+.bracelet2 .braceletText .last-letters {
+  bottom: -4px;
+}
+
+.bracelet1 .braceletText::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  background-color: rgb(90, 45, 162);
+}
+.bracelet1 .braceletText.animate::after {
+  animation: braceletText-animation 0.25s steps(1) forwards;
+}
+
+@keyframes braceletText-animation {
+  to {
+    width: 0;
+  }
+}
+
+@keyframes title-animation {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+}
+.banner.No3 .bracelet1.animate {
+  animation: round-bracelet 0.5s forwards;
+}
+.banner.No3 .bracelet2.animate {
+  animation: round-bracelet 0.5s 0.1s forwards;
+}
+@keyframes round-bracelet {
+  to {
+    border-radius: 42%;
+  }
+}
