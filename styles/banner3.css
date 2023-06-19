@@ -18,7 +18,7 @@
   margin-top: 5px;
   letter-spacing: 1px;
   margin-block-end: 20px;
-  transform: translateY(18%);
+  transform: translateY(29%);
   opacity: 0;
 }
 
@@ -30,7 +30,7 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 15%;
-  transform: translateY(30%);
+  transform: translateY(40%);
 }
 .braceletContainer :is(.bracelet1, .bracelet2) {
   position: relative;

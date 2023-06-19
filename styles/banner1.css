@@ -88,7 +88,9 @@ body {
   font-family: "ExtraBoldPoppinsFont", sans-serif;
   color: rgb(78, 1, 141);
 }
-
+.No1 .headerText{
+  transform: translateY(90%);
+}
 .No1:not(.No2) .title {
   text-align: center;
   font-family: "MediumPoppinsFont", sans-serif;
